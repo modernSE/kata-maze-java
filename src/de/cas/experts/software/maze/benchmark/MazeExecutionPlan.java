@@ -40,7 +40,7 @@ public class MazeExecutionPlan {
 	
 	private Random random;
 	
-	@Param({THESEUS})
+	@Param({CRACK})
 	public String imageFile;
 	
 	static final int NUM_QUERIES = 100;
