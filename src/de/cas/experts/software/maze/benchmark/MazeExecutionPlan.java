@@ -50,7 +50,8 @@ public class MazeExecutionPlan {
 	
 	@Setup(Level.Trial)
 	public void setUp() throws IOException {
-		String imageFilePath = System.getProperty("user.dir") + "/data/mazes/" + imageFile;
+		String imageFilePath = System.getProperty("user.dir") + "/mazes/astrolog/" + imageFile;
+		System.out.print(imageFilePath);
 		BufferedImage image = ImageIO.read(new File(imageFilePath));
 		graph = ImageGraph.fromImage(image);
 	}

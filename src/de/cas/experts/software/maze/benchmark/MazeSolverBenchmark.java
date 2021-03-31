@@ -1,5 +1,7 @@
 package de.cas.experts.software.maze.benchmark;
 
+import java.io.IOException;
+
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
 import org.openjdk.jmh.annotations.Fork;
@@ -8,6 +10,7 @@ import org.openjdk.jmh.annotations.Mode;
 import org.openjdk.jmh.annotations.OperationsPerInvocation;
 import org.openjdk.jmh.annotations.Warmup;
 import org.openjdk.jmh.infra.Blackhole;
+import org.openjdk.jmh.runner.RunnerException;
 
 import de.cas.experts.software.maze.MazeSolver;
 
@@ -23,6 +26,10 @@ public class MazeSolverBenchmark {
 		for(Query query : executionPlan.getQueries()) {
 			bh.consume(MazeSolver.findPath(executionPlan.getGraph(), query.origin, query.destination));
 		}
+	}
+	
+	public static void main(String[] args) throws RunnerException, IOException {
+		org.openjdk.jmh.Main.main(args);
 	}
 
 }

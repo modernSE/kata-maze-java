@@ -14,6 +14,7 @@ The rules:
 * Try to stay clean. Hide complexity and low-level optimizations.
 
 ## Technical Details
+It's a maven project. So to open it in Eclipse, use Import > Existing Maven Project ...
 Tested with OpenJDK 11.
 
 The package `de.cas.experts.software.maze` contains the algorithm and data structures you have to optimize.
@@ -23,7 +24,7 @@ The sub-package `.benchmark` contains benchmark code. Building it requires maven
         $ mvn clean package
         $ java -jar target/benchmark.jar
 
-To run the benchmark from eclipse, right click pom.xml > Run as > Maven build > clean package. Then add a run configuration for MazeSolverBenchmark with `org.openjdk.jmh.Main` as main method.
+To run the benchmark from eclipse, right click pom.xml > Run as > Maven build > clean package. Then simply run the MazeSolverBenchmark: Run as > Java Application
 
 The sub-package `.app` contains the UI part. You can have a look at it if you find it interesting, but there is not much to do here.
 
